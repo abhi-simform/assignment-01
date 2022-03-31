@@ -1,0 +1,75 @@
+@use "../util/" as *;
+
+.clients {
+   padding-block: rem(130) rem(190);
+   padding-inline: rem(177);
+   .container {
+      padding: 0;
+   }
+   @include breakpoint(xl) {
+      padding-block: rem(114) rem(167);
+      padding-inline: rem(155);
+   }
+   @include breakpoint(lg) {
+      padding-block: rem(91) rem(133);
+      padding-inline: rem(32);
+   }
+   @include breakpoint(md) {
+      padding-block: rem(80) rem(110);
+   }
+   @include breakpoint(sm) {
+      padding-block: rem(60) rem(100);
+   }
+}
+
+.clients__title {
+   max-width: 700px;
+   font-weight: 500;
+   margin-inline: auto;
+   text-align: center;
+   font-size: rem(42);
+   text-align: center;
+   @include breakpoint(xl) {
+      font-size: rem(37);
+   }
+   @include breakpoint(lg) {
+      font-size: rem(30);
+   }
+   @include breakpoint(sm) {
+      font-size: rem(28);
+   }
+}
+
+.clients__description {
+   max-width: 700px;
+   margin-inline: auto;
+   margin-block-start: rem(20);
+   text-align: center;
+}
+
+.client__logo {
+   margin-block-start: rem(90);
+   display: grid;
+   gap: rem(75);
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   align-items: center;
+   justify-items: center;
+   @include breakpoint(lg) {
+      gap: rem(66);
+      margin-block-start: rem(80);
+   }
+   @include breakpoint(lg) {
+      gap: rem(55);
+      margin-block-start: rem(63);
+   }
+   @include breakpoint(md) {
+      margin-block-start: rem(50);
+
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   @include breakpoint(xs) {
+      margin-block-start: rem(35);
+      gap: rem(40);
+      grid-template-columns: 1fr 1fr;
+   }
+}

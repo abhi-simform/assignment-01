@@ -1,0 +1,2 @@
+"use strict";var hamburger=document.querySelector("#hamburger"),navList=document.querySelector("#navList"),line=document.querySelectorAll(".line");hamburger.addEventListener("click",(function(){line.forEach((function(e){e.classList.toggle("open")})),navList.style.maxHeight?navList.style.maxHeight=null:navList.style.maxHeight=navList.scrollHeight+"px"}));
+//# sourceMappingURL=script.js.map

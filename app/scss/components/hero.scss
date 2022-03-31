@@ -1,0 +1,97 @@
+@use "../util/" as *;
+
+.hero {
+   background: var(--yellow);
+   padding: rem(82) rem(206) rem(120) rem(192);
+   .container {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+      gap: rem(150);
+      @include breakpoint(xl) {
+         gap: rem(105);
+      }
+      @include breakpoint(lg) {
+         gap: rem(105);
+         margin-inline: 2rem;
+      }
+      @include breakpoint(md) {
+         gap: rem(60);
+      }
+      @include breakpoint(sm) {
+         grid-auto-flow: row;
+         gap: rem(40);
+      }
+   }
+   @include breakpoint(xl) {
+      padding: rem(72) rem(181) rem(105) rem(168);
+   }
+   @include breakpoint(lg) {
+      padding: rem(57) rem(0) rem(84) rem(0);
+   }
+   @include breakpoint(md) {
+      padding: rem(50) rem(0) rem(80) rem(0);
+   }
+}
+
+.hero__image {
+   @include breakpoint(sm) {
+      justify-self: center;
+   }
+}
+
+.hero__text--title {
+   max-width: rem(525);
+   font-weight: 700;
+   font-size: rem(50);
+   line-height: 1.4;
+   @include breakpoint(xl) {
+      font-size: rem(45);
+   }
+   @include breakpoint(lg) {
+      font-size: rem(40);
+   }
+   @include breakpoint(md) {
+      font-size: rem(35);
+      line-height: 1.2;
+   }
+   @include breakpoint(xs) {
+      font-size: rem(32);
+   }
+   @include breakpoint(xs) {
+      font-size: rem(28);
+   }
+}
+
+.hero__text--description {
+   max-width: rem(543);
+   font-size: rem(16);
+   line-height: rem(24);
+   margin-block-start: rem(30);
+   @include breakpoint(md) {
+      margin-block-start: rem(20);
+   }
+   @include breakpoint(sm) {
+      margin-block-start: rem(16);
+   }
+}
+
+.hero__text--button {
+   display: inline-block;
+   margin-block-start: rem(34);
+   padding: 1rem 2rem;
+   color: var(--white);
+   background: var(--black);
+   border-radius: 200px;
+   @include breakpoint(md) {
+      margin-block-start: rem(22);
+      padding: 0.8rem 1.6rem;
+   }
+   @include breakpoint(sm) {
+      margin-block-start: rem(16);
+   }
+}
